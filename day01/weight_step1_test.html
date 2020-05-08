@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>적정 몸무게 파악</title>
+    <script>
+        var userName = prompt("당신의 이름은?");
+        var userHeight = prompt("당신의 신장은?");
+        var userWeight = prompt("당신의 몸무게는?");
+
+        var normalWeight = (userHeight - 100) * 0.9;
+        var gap = Number(userWeight) - normalWeight;
+        var txt = gap > 0 ? "초과한 " : "적다는 ";
+
+        document.write("신장: ", userHeight, "(cm)<br>");
+        document.write("체중: ", userWeight, "(kg)<br>");
+        document.write("적정 체중: (", userHeight, "- 100) x 0.9 = ", normalWeight, "(kg)<br>");
+        document.write("결과: 적정 체중은 ", normalWeight, "이며, 현재 적정 체중보다 ", Math.abs(gap), "kg", txt, "것을 알 수 있습니다.<br>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>
