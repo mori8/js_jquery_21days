@@ -1,0 +1,49 @@
+<!-- 2020. 05. 10 Day 07 드디어 제이쿼리 단원 입성 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script>
+        $(function () {
+            $("#txt").css("color", "red");
+        });
+        $(function () {
+            $("#tit, h1").css("background-color", "#ff0").css("border", "2px solid #f00"); // chaining
+            $("h2#chimaek").css("color", "salmon"); // 종속 선택자
+            $("h3").next().css("color", "#999"); // 다음 요소 선택자
+            $("#egger + p").css("background-color", "antiquewhite"); // 다음 요소 선택자(선택한 요소를 기준으로 바로 다음에 오는 선택한 요소 지정), 언제 써먹는 걸까
+            $("#list_1").siblings().css("font-size", "20px"); // 전체 형제 요소 선택자(본인 제외)
+            $(".chicken-list").parents().css("border", "2px dashed #00f"); // 전체 상위 요소 선택
+            $("#list_1").parents("ul").css("background-color", "skyblue"); // 상위 요소중 ul만 선택
+
+        });
+    </script>
+</head>
+<body>
+    <p id="txt">내용</p>
+    <h1>JQuery</h1>
+    <h2 id="tit">selector</h2>
+    <h2 id="chimaek">Chicken & Beer</h2>
+    <div>
+        <h3 id="goobne">Goobne Gochubasasak</h3>
+        <p>순살이 더 맛있음. 마블링 소스에 찍어먹으면 한 마리 그냥 호록쓰</p>
+    </div>
+    <div>
+        <h3 id="egger">Egger Radler</h3>
+        <p style="display: inline-block">과일맥주 예거는 복숭아맛, 자몽맛, 레몬맛이 있는데, 레몬맛이 제일 맛있다.<br>
+        복숭아맛도 맛있지만 자몽맛은 별로다. 약맛난다.</p>
+    </div>
+    <div class="chicken-list">
+        <h3>Best Korean Chicken top 5</h3>
+        <ul>
+            <li id="list_1">굽네 고추바사삭</li>
+            <li>푸라닭 블랙알리오올리오</li>
+            <li>BBQ 황금올리브</li>
+            <li>BHC 뿌링클</li>
+            <li>충만 스노우어니언</li>
+        </ul>
+    </div>
+</body>
+</html>
